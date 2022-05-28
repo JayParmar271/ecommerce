@@ -1,7 +1,6 @@
-**/migrations
-*.DS_Store
-**/__pycache__
-**/.DS_Store
+*migrations
+*.DS_Store*
+*__pycache__*
 env/
 db.sqlite3
 static/
