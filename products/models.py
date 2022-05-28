@@ -15,6 +15,7 @@ class Product(TimestampableMixin, StatusMixin, StrMixin):
     price = models.FloatField(null=False)
     qty = models.IntegerField(null=False)
 
+
 class Category(TimestampableMixin, StatusMixin, StrMixin):
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=3300)
