@@ -1,9 +1,14 @@
 from django.contrib import admin
-from .models import Product, Category
+from .models import Product, Category, Image
 
 class ProductAdmin(admin.ModelAdmin):
     list_display = ('name', 'user', 'category', 'price', 'qty', 'is_active', 'created')
     exclude = ('user',)
+
+    class ImageInline(admin.TabularInline):
+        model = Image
+
+    inlines = [ImageInline,]
 
     def save_model(self, request, obj, form, change):
         obj.user = request.user
