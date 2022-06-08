@@ -15,7 +15,7 @@
     source <virtual_environment_dir>/venv/bin/activate
 
 ## 3. Install python dependencies
-    python manage.py -r requirements.txt
+    pip3 install -r requirements.txt
 
 ## 4. Run project
 
